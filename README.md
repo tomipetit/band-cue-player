@@ -39,6 +39,42 @@ ZOOM AMS-24
 
 ---
 
+## ローカル環境構築
+
+### 必要なもの
+
+- macOS 13.0 以降
+- Xcode 15 以降
+
+### 手順
+
+```bash
+# リポジトリをクローン
+git clone https://github.com/tomipetit/band-cue-player.git
+cd band-cue-player
+
+# Xcode でプロジェクトを開く
+open BandClickPlayer.xcodeproj
+```
+
+Xcode が開いたら:
+
+1. ツールバーの Scheme が `BandClickPlayer` になっていることを確認する
+2. `⌘R` でビルド & 実行する
+
+### 署名について
+
+初回ビルド時、Signing & Capabilities で Team を自分の Apple ID に設定する。
+
+`BandClickPlayer` ターゲット → Signing & Capabilities → Team を選択。
+
+### 動作確認
+
+- ZOOM AMS-24 など 4ch 出力デバイスを接続した状態で Output Device に表示されることを確認する
+- 2ch デバイス（MacBook 内蔵スピーカーなど）でも起動・再生は可能（オケとクリックが同じ出力にミックスされる）
+
+---
+
 ## 開発方針
 
 このアプリは DAW の代替ではありません。
